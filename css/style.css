@@ -12,6 +12,21 @@ body {
   font-family: "roboto";
 }
 
+/* body.lock{
+  overflow: hidden;
+} */
+
+.burger-main {
+  position: fixed;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: #eaeaea;
+  overflow-y: scroll;
+  top: -100vh;
+  transition: all 0.3s ease;
+}
+
 .container {
   margin: 0px auto;
   max-width: 1920px;
@@ -36,6 +51,8 @@ body {
 
 .burger-main__link {
   color: #000000;
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .burger-main__link-menu {
@@ -50,7 +67,59 @@ body {
   border-bottom: 1px solid rgb(216, 216, 216);
   padding-bottom: 32px;
 }
+.burger-main__bottom-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+}
 
+.burger-main__bottom-btn-sign-up {
+  color: #ffffff;
+  font-size: 16px;
+  background-color: rgb(0, 0, 0);
+  width: 295px;
+  padding: 16px 24px;
+  border-radius: 30px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.burger-main__bottom-btn-card {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  width: 295px;
+  padding: 16px 24px;
+  border-radius: 30px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.burger-main__bottom-social-wrap {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.burger-main__bottom-social-inst {
+  margin-right: 46px;
+}
+
+.burger-main__bottom-social-tlgrm {
+}
+
+.burger-main__bottom-tel {
+  position: relative;
+  color: #838383;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.burger-main__bottom-logo {
+  margin-bottom: 72px;
+}
+
+.burger-main__bottom-tel::before {
+}
 .header {
   background-color: #eaeaea;
   height: 3000px;
@@ -281,11 +350,10 @@ body {
 }
 
 @media (max-width: 1200px) {
-
   .header__nav-wrap {
     height: 120px;
   }
-  
+
   .header__subtitle {
     margin-top: 246px;
   }
@@ -327,18 +395,9 @@ body {
 
   .burger {
   }
-
-  .burger-main {
-    position: fixed;
-    z-index: 1000;
-    width: 100vw;
-    height: 100vh;
-    background-color: #eaeaea;
-  }
 }
 
 @media (max-width: 970px) {
-
   .header__nav-wrap {
     height: 96px;
   }
